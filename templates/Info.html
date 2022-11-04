@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/LoginRegister.css') }}">
+    <title>Info</title>
+</head>
+<body>
+<div class = "container">
+        <nav class = "menu">
+            <ul class = "navbar">
+                <li><a href = "/">Home</a></li>
+                <li><a href = "/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <hr style="color: white">
+        <img src = "{{icon}}" style="width: 20%; margin-left: 40%">
+        <hr style="color: white">
+        <h1 style="text-align: center; color: #e27d60; margin-top: 2%; width: 40%; margin-left: 30%;"><strong>Official name: {{officialName}}</strong></h1>
+        <h1 style="text-align: center; color: #e27d60; margin-top: 2%; width: 40%; margin-left: 30%; font-size: 130%;">Mint: {{mint}}</h1>
+        <h1 style="text-align: center; color: #e27d60; margin-top: 2%; width: 40%; margin-left: 30%">Name: {{ name }}</h1>
+        <h1 style="text-align: center; color: #e27d60; margin-top: 2%; width: 40%; margin-left: 30%">Symbol: {{ symbol }}</h1>
+        <h1 style="text-align: center; color: #e27d60; margin-top: 2%; width: 40%; margin-left: 30%">Description: {{ description }}</h1>
+        <h1 style="text-align: center; color: #e27d60; margin-top: 2%; width: 40%; margin-left: 30%">Collection: {{ colName }} </h1>
+        <h1 style="text-align: center; color: #e27d60; margin-top: 2%; width: 40%; margin-left: 30%">Family: {{ colFamily }}</h1>
+</div>
+</div>
+
+</body>
+</html>

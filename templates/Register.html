@@ -1,0 +1,42 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='css/LoginRegister.css')}}">
+{% endblock %}
+
+{% block content %}
+<body>
+<div class = "container">
+        <nav class = "menu">
+            <ul class = "navbar">
+                <li><a href = "/">Home</a></li>
+                <li><a href = "/NFTSearch">Search NFT</a></li>
+                <li><a href = "/login">Login</a></li>
+                <li><a href = "/register">Start for Free</a></li>
+            </ul>
+        </nav>
+</div>
+    <div class = "container1">
+        <h1 style = "color: rebeccapurple"><strong>Register</strong></h1>
+        <hr style = "border-color: rebeccapurple">
+        <form action="/register" method = "post" class="form-signin">
+            {%for message in get_flashed_messages()%}
+					<span style="color:red; font-size: 20px">{{message}}</span>
+				{%endfor%}
+            <h3 class="form-signin-heading">
+                {{ form.hidden_tag() }}
+                {{ wtf.form_field(form.email) }}
+                {{ wtf.form_field(form.password) }}
+                {{ wtf.form_field(form.confirm) }}
+            </h3>
+            <button type = "submit">Register</button>
+        </form>
+    </div>
+</body>
+{%endblock%}

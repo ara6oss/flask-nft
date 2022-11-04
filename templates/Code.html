@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/LoginRegister.css') }}">
+    <title>Code Verification</title>
+</head>
+<body>
+  <div class="container1">
+        <h1 style = "color: rebeccapurple">Code verification</h1>
+        <hr style = "border-color: mediumpurple">
+        <p></p>
+        <form action="/code" method="post">
+            <label for = "code">Code</label>
+            {%for message in get_flashed_messages()%}
+					<span style="color:red">{{message}}</span>
+				{%endfor%}
+            <input type = "text" name = "code" id = "code" placeholder="Please write your code">
+            <button type = "submit">Check Code</button>
+        </form>
+    </div>
+</body>
+</html>
